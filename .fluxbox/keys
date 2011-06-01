@@ -1,0 +1,44 @@
+!mouse actions added by fluxbox-update_configs
+OnTitlebar Mouse2 :StartTabbing
+
+!mouse actions added by fluxbox-update_configs
+OnTitlebar Double Mouse1 :Shade
+OnTitlebar Mouse3 :WindowMenu
+
+!mouse actions added by fluxbox-update_configs
+OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing BottomRight}
+
+!mouse actions added by fluxbox-update_configs
+OnDesktop Mouse1        :hideMenus
+OnDesktop Mouse2        :workspaceMenu
+OnDesktop Mouse3        :rootMenu
+OnDesktop Mouse5        :nextWorkspace
+OnDesktop Mouse4        :prevWorkspace
+
+
+Mod1 Tab                :NextWindow
+Mod1 Shift Tab          :PrevWindow
+
+Mod1 F4                 :Close
+
+Control Mod1 Right      :NextWorkspace
+Control Mod1 Left       :PrevWorkspace
+
+Control Mod1 x          :ExecCommand xterm -ls -bg black -fg grey
+Control Mod1 Shift x    :ExecCommand gnome-terminal
+!Control Mod1 f          :ExecCommand firefox
+Control Mod1 f          :ExecCommand  /home/opoint/IT-avdeling/scripts/start_firefox.sh
+Control Mod1 t          :ExecCommand LC_TIME=en_DK.utf8 thunderbird
+Control Mod1 c          :ExecCommand gnome-calculator
+Control Mod1 g          :ExecCommand gvim
+Control Mod1 p          :ExecCommand pidgin
+
+Control Mod1 l  :ExecCommand gnome-screensaver-command --lock
+Control Mod1 q  :Quit
+
+Mod1 s          :Minimize
+Mod1 d          :Maximize
+Control Mod1 d  :MaximizeVertical
+
+
