@@ -3,6 +3,13 @@
 "   http://bitbucket.org/ches/dotfiles/src/tip/.vimrc
 "
 
+" Temporary: Disable arrow keys
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+
+
 " Standard ..
 set nocompatible
 syntax enable
@@ -35,7 +42,7 @@ set softtabstop=4
 set shiftwidth=4
 set smartindent
 
-set textwidth=100 " for laptopen
+" set textwidth=100 " for laptop use
 
 
 " allow backspacing over everything in insert mode
@@ -64,16 +71,30 @@ set modelines=0
 set cursorline
 set ttyfast
 set laststatus=2
-set hlsearch        " highlight search term
-nnoremap <leader><space> :noh<cr>
-nnoremap / /\v
-vnoremap / /\v
+" highlight search term
+set hlsearch
+
+
+
+" MAPPINGS
+" Key to use as <leader>? (only normal mode)
+let mapleader = ","
+
+" Make the search highliting easy to turn off
+nnoremap <leader><space> :noh<cr> 
+
+" Suppose to make the searching a little closer to ''normal'' reg exps, but
+" the cure is worse than the disease.
+" (not to self: learn vim search syntax or find a way to use real, Perl
+" compatible, regular expressions) 
+" http://vimregex.com/
+""" nnoremap / /\v
+""" vnoremap / /\v
 
 
 
 " set relativenumber
 " set undofile
-
 
 
 " Let gf open the filename under cursor
@@ -88,6 +109,8 @@ imap ,,, <esc>bdwa<<esc>pa><cr></<esc>pa><esc>kA
 " dont use Q for Ex mode
 map Q :q
 
+
+" easy insert
 map <space> i
 
 "  simpler than :make?
